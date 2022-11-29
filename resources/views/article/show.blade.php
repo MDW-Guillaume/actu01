@@ -15,7 +15,7 @@
                 <p class="article_description">{{ $article->content }}</p>
             </div>
             <div class="article_details">
-                <p>Par {{ $users[$article->user_id]->name }}</p>
+                <p>Par {{ $users[$article->user_id - 1]->name }}</p>
                 <span>
                     <?= date(' d F Y', strtotime($article->created_at)) . ' à ' . date('h:i', strtotime($article->created_at)) ?>
                     , mise à jour à
@@ -51,7 +51,7 @@
                             <div class="similar_article_details">
                                 <h3>{{ $similar_article->name }}</h3>
                                 <div class="similar_article_info">
-                                    <span>Par {{ $users[$similar_article->user_id]->name }}</span>
+                                    <span>Par {{ $users[$similar_article->user_id - 1]->name }}</span>
                                     <span><?= date(' d F Y', strtotime($article->created_at)) ?></span>
                                 </div>
                             </div>

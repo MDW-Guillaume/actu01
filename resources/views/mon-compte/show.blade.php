@@ -13,7 +13,8 @@
         <div class="user_info">
             <h3>Informations personnelles</h3>
 
-            <form action="" method="post" class="user_personnal_info">
+            <form action="{{ route('mon-compte') }}" method="post" class="user_personnal_info">
+                @csrf
                 <div class="user_personnal_info_text">
                     <span>Nom :</span>
                     <p class="user_personnal_info_span " id="user_personnal_info_span_name">
@@ -21,7 +22,7 @@
                             <i class="fa-regular fa-pen-to-square" id="update-name"></i>
                         </span>
                     </p> {{-- display : block jusqu'a interaction avec l'icone ou le bouton --}}
-                    <input type="text" id="user_personnal_info_name_input" placeholder="{{ $user_info->name }}">
+                    <input name="name" type="text" id="user_personnal_info_name_input" placeholder="{{ $user_info->name }}">
                     {{-- display : none jusqu'a interaction avec l'icone ou le bouton --}}
 
                 </div>
@@ -32,7 +33,7 @@
                             <i class="fa-regular fa-pen-to-square" id="update-email"></i>
                         </span>
                     </p> {{-- display : block jusqu'a interaction avec l'icone ou le bouton --}}
-                    <input type="email" id="user_personnal_info_email_input" placeholder="{{ $user_info->email }}">
+                    <input name="email" type="email" id="user_personnal_info_email_input" placeholder="{{ $user_info->email }}">
                     {{-- display : none jusqu'a interaction avec l'icone ou le bouton --}}
 
                 </div>
@@ -42,12 +43,36 @@
                 </div>
             </form>
         </div>
-        <div class="my_actuality">
-            <h3>Mes actualités</h3>
-            <?php if(!empty($user_articles)) : ?>
 
+        <div class="my_actuality">
+            <div class="my_actuality_title">
+                <h3>Mes actualités</h3>
+            <?php if(count($user_articles) != 0) : ?>
+                <a href="">Voir tout</a>
+            </div>
+            <div class="user_news_list">
+                @foreach($user_articles as $user_article)
+                <a href="{{ route('article.show', $user_article->id) }}">
+                    <div class="home_lastest_news_element">
+                        <img src="{{ $user_article->image }}" alt="{{ $user_article->name }}">
+                        <div class="content_lastest_news">
+                            <h2>{{ $user_article->name }}</h2>
+                            <span>
+                                <?php
+                                setlocale(LC_ALL, 'fr_FR');
+                                echo date(' d F Y', strtotime($user_article->created_at)) . ' à ' . date('h:i', strtotime($user_article->created_at));
+                                ?>
+                            </span><br>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
+            </div>
             <?php else : ?>
-            <p>Vous n'avez pas crée d'actualité !</p>
+            <div class="no-news">
+                <i class="fa-regular fa-newspaper"></i>
+                <p>Vous n'avez pas crée d'actualité !</p>
+            </div>
             <?php endif; ?>
 
         </div>

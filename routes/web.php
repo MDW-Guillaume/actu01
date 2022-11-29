@@ -39,6 +39,7 @@ Route::get('/newsletter', [NewsletterController::class, 'show'])->name('newslett
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter');
 
 Route::get('/mon-compte', [UserController::class, 'show'])->middleware(['auth', 'verified'])->name('mon-compte');
+Route::post('/mon-compte', [UserController::class, 'store'])->middleware(['auth', 'verified'])->name('mon-compte');
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware(['auth', 'verified'])->name('deconnexion');
 
 Route::get('/dashboard', function () {

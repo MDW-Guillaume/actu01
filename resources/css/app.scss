@@ -191,10 +191,10 @@ body {
 
                 h3 {
                     margin-bottom: 10px;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #263768;
+                    font-weight  : 500;
+                    font-size    : 16px;
+                    line-height  : 19px;
+                    color        : #263768;
                     margin-bottom: 20px;
                 }
 
@@ -317,21 +317,106 @@ body {
                 }
             }
 
-            .my_actuality{
-                border-radius   : 8px;
-                margin-top      : 20px;
-                padding         : 10px;
+            .my_actuality {
+                border-radius: 8px;
+                margin-top   : 20px;
+                padding      : 10px;
 
-                h3 {
-                    margin-bottom: 10px;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #263768;
-                    margin-bottom: 20px;
+                .my_actuality_title {
+                    display        : flex;
+                    justify-content: space-between;
+
+                    h3 {
+                        width        : fit-content;
+                        font-weight  : 500;
+                        font-size    : 16px;
+                        line-height  : 19px;
+                        color        : #263768;
+                    }
+
+                    a {
+                        width          : fit-content;
+                        padding        : 4px 10px;
+                        background     : #0094C4;
+                        border-radius  : 5.66667px;
+                        font-family    : "Avenir";
+                        font-style     : normal;
+                        font-weight    : 500;
+                        font-size      : 10px;
+                        line-height    : 14px;
+                        text-transform : uppercase;
+                        color          : #FFFFFF;
+                        margin-left    : auto;
+                        margin-right   : 10px;
+                        text-decoration: none;
+                    }
                 }
 
-                
+                .user_news_list {
+                    overflow          : scroll;
+                    display           : flex;
+                    flex-direction    : row;
+                    padding-left      : 5px;
+                    margin-top        : 30px;
+                    -ms-overflow-style: none;
+                    scrollbar-width   : none;
+
+                    a {
+                        text-decoration: none;
+
+                        .home_lastest_news_element {
+                            margin        : 0 5px;
+                            position      : relative;
+                            padding-bottom: 10px;
+                            border-bottom : 1px solid black;
+
+                            img {
+                                width: 294px;
+                            }
+                        }
+
+                        .content_lastest_news {
+                            * {
+                                margin-bottom: 5px;
+                            }
+
+                            h2 {
+                                font-weight: 800;
+                                font-size  : 12px;
+                                line-height: 16px;
+                                color      : #000;
+                            }
+
+                            span,
+                            span a {
+                                font-weight: 400;
+                                font-size  : 10px;
+                                line-height: 14px;
+                                color      : #585858;
+                            }
+                        }
+                    }
+                }
+
+                .no-news {
+                    height    : 50px;
+                    text-align: center;
+
+                    i {
+                        font-size: 50px;
+                        opacity  : 0.5;
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                        font-weight  : 500;
+                        font-size    : 14px;
+                        line-height  : 19px;
+                        color        : #263768;
+                        margin-bottom: 20px;
+                    }
+                }
+
             }
         }
 
