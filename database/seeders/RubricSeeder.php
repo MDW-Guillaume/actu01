@@ -15,6 +15,14 @@ class RubricSeeder extends Seeder
      */
     public function run()
     {
-        Rubric::factory()->count(8)->create();
+
+        $categories = ['A ne pas manquer','Culture','Politique','Faits divers','Éducation','Sortie','Sciences','Sports','Économie'];
+        // Rubric::factory()->count(8)->create();
+        
+        foreach ($categories as $categorie) {
+            \App\Models\Rubric::create(
+                ['name' => $categorie]
+            );    
+        }
     }
 }

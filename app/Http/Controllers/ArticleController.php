@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
     public function show($id){
+        // Incrémentation de 1 lors de l'ouverture d'un article
         $article = Article::findOrFail($id);
+
+        $article->increment('read');
+
         $users = User::get();
         $similar_articles = Article::where('id', '>', $id)->take(3)->get();
 

@@ -20,9 +20,8 @@ class ArticleFactory extends Factory
             'name' => fake()->word(),
             'content' => fake()->realText(),
             'image' => fake()->imageUrl(640, 480, 'animals', true),
-            'timelength' => fake()->numberBetween(1, 10),
             'read' => fake()->numberBetween(1, 350),  
-            'user_id' => fake()->numberBetween(1, 8),
+            'user_id' => fake()->numberBetween(1, 7),
             'rubric_id' => fake()->numberBetween(1, 8),
 
         ];

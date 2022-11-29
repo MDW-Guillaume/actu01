@@ -2,12 +2,12 @@
 
 ## Liste des pages
 
-- [ ] Index
+- [x] Index
 - [ ] Météo
 - [x] Article Unique
-- [ ] Catégorie
-  - [ ] Catégorie/{article}
-- [ ] Contact
+- [x] Catégorie
+  - [x] Catégorie/{article}
+- [x] Contact
 - [ ] Mon compte
   - [ ] Connexion / Inscription
   - [ ] Mon compte 
@@ -17,14 +17,14 @@
 
 - [x] /
 - [x] /article/{id}
-- [ ] /categorie
-- [ ] /categorie/{slug}
+- [x] /categorie
+- [x] /categorie/{slug}
 - [ ] /user
 - [ ] /user/{id}
-- [ ] /live
+- [x] /live
 - [ ] /meteo
-- [ ] /contact
-- [ ] /newsletter
+- [x] /contact
+- [x] /newsletter
 - [ ] search
 
 ## Fonctions 

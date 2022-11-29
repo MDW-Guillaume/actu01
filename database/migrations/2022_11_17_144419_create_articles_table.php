@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -19,7 +20,6 @@ return new class extends Migration
             $table->string('name');
             $table->text('content');
             $table->string('image');
-            $table->integer('timelength');
             $table->integer('read');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
@@ -44,6 +44,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Schema::dropIfExists('articles');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 };
