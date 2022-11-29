@@ -14,5 +14,6 @@
     @yield('content')
     @include('includes.footer')
     @vite(['resources/js/app.js'])
+    @yield('js')
 </body>
 </html>

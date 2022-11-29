@@ -91,7 +91,7 @@
                             <div class="rubric_article_details">
                                 <h3>{{ $articles_culture[$i]->name }}</h3>
                                 <div class="rubric_article_info">
-                                    <span>Par {{ $users[$articles_culture[$i]->user_id]->name }}</span>
+                                    {{-- <span>Par {{ $users[$articles_culture[$i]->user_id]->name }}</span> --}}
                                     <span><?= date(' d F Y', strtotime($articles_culture[$i]->created_at)) ?></span>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                             <div class="rubric_article_details">
                                 <h3>{{ $articles_populaires[$i]->name }}</h3>
                                 <div class="rubric_article_info">
-                                    <span>Par {{ $users[$articles_populaires[$i]->user_id]->name }}</span>
+                                    {{-- <span>Par {{ $users[$articles_populaires[$i]->user_id]->name }}</span> --}}
                                     <span><?= date(' d F Y', strtotime($articles_populaires[$i]->created_at)) ?></span>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                             <?php //dd($users[$articles[$i]->user_id]->name);
                             ?>
                             <h2>{{ $articles[$i]->name }}</h2>
-                            <span>Par {{ $users[$articles[$i]->user_id]->name }}</span><br>
+                            {{-- <span>Par {{ $users[$articles[$i]->user_id]->name }}</span><br> --}}
                             {{-- Lien vers la page de l'utilisateur --}}
                             <span>
                                 <?php

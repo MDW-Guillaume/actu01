@@ -1,13 +1,7 @@
 import './bootstrap';
 
-let open = document.getElementById('search-open')
-let close = document.getElementById('search-close')
-let content = document.getElementById('search-content')
+import Alpine from 'alpinejs';
 
-open.addEventListener('click', function(){
-    content.classList.toggle('reveal')
-})
+window.Alpine = Alpine;
 
-close.addEventListener('click', function(){
-    content.classList.remove('reveal')
-})
+Alpine.start();

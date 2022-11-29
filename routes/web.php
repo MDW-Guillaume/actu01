@@ -1,13 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LiveController;
+use App\Http\Controllers\UserController;
+use Illuminate\Auth\Events\Authenticated;
 use App\Http\Controllers\RubricController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +38,17 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact');
 Route::get('/newsletter', [NewsletterController::class, 'show'])->name('newsletter');
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter');
 
-Route::get('/connexion', [AuthController::class, 'show'])->name('connexion');
+Route::get('/mon-compte', [UserController::class, 'show'])->middleware(['auth', 'verified'])->name('mon-compte');
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->middleware(['auth', 'verified'])->name('deconnexion');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

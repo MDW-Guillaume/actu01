@@ -13,12 +13,22 @@
                 </a>
             </h1>
         </div>
+
+        @auth
+        
         <div class="user_side">
-            <img src="{{ URL::to('/') }}/img/mon-compte.png" alt="" class="user-side-icon">
+            <a href="{{ route('mon-compte') }}">
+                <img src="{{ URL::to('/') }}/img/mon-compte.png" alt="" class="user-side-icon">
+            </a>
             <span class="user_side_separator"></span>
             {{-- <a href="{{ route('account') }}">s'abonner</a> --}}
-            <a href="{{ route('connexion') }}" class="user-side-subscribe">s'abonner</a>
+            <a href="" class="user-side-subscribe">s'abonner</a>
         </div>
+        @else
+        <div class="user_side">
+            <a href="{{ route('login') }}" class="user-side-subscribe">Se connecter</a>
+        </div>
+        @endauth
     </div>
     <div class="menu-header">
         <ul class="nav">
