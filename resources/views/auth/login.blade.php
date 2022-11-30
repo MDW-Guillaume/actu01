@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container login">
         <div class="form-auth">
 
             <img src="{{ URL::to('/') }}/img/logo.png" alt="ACTU-01">

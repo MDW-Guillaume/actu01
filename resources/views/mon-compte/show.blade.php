@@ -12,6 +12,9 @@
 
         <div class="user_info">
             <h3>Informations personnelles</h3>
+            <span id="modify-text">
+                Modifier
+            </span>
 
             <form action="{{ route('mon-compte') }}" method="post" class="user_personnal_info">
                 @csrf

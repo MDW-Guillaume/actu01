@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container contact">
         <div class="contact_title">
             <p>Une question, une remarque,</p>
             <h2>Contactez-nous</h2>

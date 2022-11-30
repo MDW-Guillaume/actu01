@@ -1,31 +1,9 @@
 # Actu-01
 
-## Liste des pages
+## Formats
+### Tablette (768px)
 
-- [x] Index
-- [x] Météo
-- [x] Article Unique
-- [x] Catégorie
-  - [x] Catégorie/{article}
-- [x] Contact
-- [x] Mon compte
-  - [x] Connexion / Inscription
-  - [x] Mon compte 
-  - [x] Mes actus
 
-## Routes
-
-- [x] /
-- [x] /article/{id}
-- [x] /categorie
-- [x] /categorie/{slug}
-- [x] /user
-- [x] /user/{id}
-- [x] /live
-- [ ] /meteo
-- [x] /contact
-- [x] /newsletter
-- [ ] search
 
 ## Fonctions 
 

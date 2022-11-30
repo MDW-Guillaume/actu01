@@ -10,10 +10,8 @@ class MeteoController extends Controller
     public function show()
     {
         $weather = new OpenWeather();
-        $current = $weather->getCurrentWeatherByCityName('Paris');
-        var_dump($current);
-        die;
+        $current = $weather->getCurrentWeatherByCityName('Compiègne', 'metric', 'fr');
         
-        return view('meteo.show')->with(['current' => $current]);
+        return view('meteo.show')->with(['meteo' => $current]);
     }
 }

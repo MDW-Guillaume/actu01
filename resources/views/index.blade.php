@@ -35,22 +35,24 @@
         <div class="home_rubrics_article">
             <div class="home_rubric_article">
                 <h2>Faits divers</h2>
-                @for ($i = 0; $i < 2; $i++)
-                    <div class="home_rubric_article_content rubric_article">
-                        <a href="{{ route('article.show', $articles_divers[$i]->id) }}">
-                            <div class="rubric_unique_article">
-                                <img src="{{ $articles_divers[$i]->image }}" alt="{{ $articles[$i]->name }}">
-                                <div class="rubric_article_details">
-                                    <h3>{{ $articles_divers[$i]->name }}</h3>
-                                    <div class="rubric_article_info">
-                                        <span>Par {{ $users[$articles_divers[$i]->user_id - 1]->name }}</span>
-                                        <span><?= date(' d F Y', strtotime($articles_divers[$i]->created_at)) ?></span>
+                <div class="home_rubric_article_grid">
+                    @foreach ($articles_divers as $article_divers)
+                        <div class="home_rubric_article_content rubric_article">
+                            <a href="{{ route('article.show', $article_divers->id) }}">
+                                <div class="rubric_unique_article">
+                                    <img src="{{ $article_divers->image }}" alt="{{ $articles[$i]->name }}">
+                                    <div class="rubric_article_details">
+                                        <h3>{{ $article_divers->name }}</h3>
+                                        <div class="rubric_article_info">
+                                            <span>Par {{ $users[$article_divers->user_id - 1]->name }}</span>
+                                            <span><?= date(' d F Y', strtotime($article_divers->created_at)) ?></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                @endfor
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
                 <a href="{{ route('rubric.show', $divers_id) }}" class="home_rubric_loadmore">Tous</a>
             </div>
         </div>
@@ -58,22 +60,24 @@
         <div class="home_rubrics_article">
             <div class="home_rubric_article">
                 <h2>Sports</h2>
-                @for ($i = 0; $i < 2; $i++)
+                <div class="home_rubric_article_grid">
+                @foreach ($articles_sport as $article_sport)
                     <div class="home_rubric_article_content rubric_article">
-                        <a href="{{ route('article.show', $articles_sport[$i]->id) }}">
+                        <a href="{{ route('article.show', $article_sport->id) }}">
                             <div class="rubric_unique_article">
-                                <img src="{{ $articles_sport[$i]->image }}" alt="{{ $articles[$i]->name }}">
+                                <img src="{{ $article_sport->image }}" alt="{{ $articles[$i]->name }}">
                                 <div class="rubric_article_details">
-                                    <h3>{{ $articles_sport[$i]->name }}</h3>
+                                    <h3>{{ $article_sport->name }}</h3>
                                     <div class="rubric_article_info">
-                                        <span>Par {{ $users[$articles_sport[$i]->user_id - 1]->name }}</span>
-                                        <span><?= date(' d F Y', strtotime($articles_sport[$i]->created_at)) ?></span>
+                                        <span>Par {{ $users[$article_sport->user_id - 1]->name }}</span>
+                                        <span><?= date(' d F Y', strtotime($article_sport->created_at)) ?></span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                @endfor
+                @endforeach
+                </div>
                 <a href="{{ route('rubric.show', $sport_id) }}" class="home_rubric_loadmore">Tous</a>
             </div>
         </div>
@@ -81,22 +85,24 @@
         <div class="home_rubrics_article">
             <div class="home_rubric_article">
                 <h2>Culture</h2>
-                @for ($i = 0; $i < 2; $i++)
+                <div class="home_rubric_article_grid">
+                @foreach ($articles_culture as $article_culture)
                     <div class="home_rubric_article_content rubric_article">
-                        <a href="{{ route('article.show', $articles_culture[$i]->id) }}">
+                        <a href="{{ route('article.show', $article_culture->id) }}">
                             <div class="rubric_unique_article">
-                                <img src="{{ $articles_culture[$i]->image }}" alt="{{ $articles[$i]->name }}">
+                                <img src="{{ $article_culture->image }}" alt="{{ $articles[$i]->name }}">
                                 <div class="rubric_article_details">
-                                    <h3>{{ $articles_culture[$i]->name }}</h3>
+                                    <h3>{{ $article_culture->name }}</h3>
                                     <div class="rubric_article_info">
-                                        <span>Par {{ $users[$articles_culture[$i]->user_id - 1]->name }}</span>
-                                        <span><?= date(' d F Y', strtotime($articles_culture[$i]->created_at)) ?></span>
+                                        <span>Par {{ $users[$article_culture->user_id - 1]->name }}</span>
+                                        <span><?= date(' d F Y', strtotime($article_culture->created_at)) ?></span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                @endfor
+                @endforeach
+                </div>
                 <a href="{{ route('rubric.show', $culture_id) }}" class="home_rubric_loadmore">Tous</a>
             </div>
         </div>
@@ -104,22 +110,24 @@
         <div class="home_rubrics_article">
             <div class="home_rubric_article">
                 <h2>Les plus lus</h2>
-                @for ($i = 0; $i < 2; $i++)
+                <div class="home_rubric_article_grid">
+                @foreach ($articles_populaires as $article_populaires)
                     <div class="home_rubric_article_content rubric_article">
-                        <a href="{{ route('article.show', $articles_populaires[$i]->id) }}">
+                        <a href="{{ route('article.show', $article_populaires->id) }}">
                             <div class="rubric_unique_article">
-                                <img src="{{ $articles_populaires[$i]->image }}" alt="{{ $articles[$i]->name }}">
+                                <img src="{{ $article_populaires->image }}" alt="{{ $articles[$i]->name }}">
                                 <div class="rubric_article_details">
-                                    <h3>{{ $articles_populaires[$i]->name }}</h3>
+                                    <h3>{{ $article_populaires->name }}</h3>
                                     <div class="rubric_article_info">
-                                        <span>Par {{ $users[$articles_populaires[$i]->user_id - 1]->name }}</span>
-                                        <span><?= date(' d F Y', strtotime($articles_populaires[$i]->created_at)) ?></span>
+                                        <span>Par {{ $users[$article_populaires->user_id - 1]->name }}</span>
+                                        <span><?= date(' d F Y', strtotime($article_populaires->created_at)) ?></span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                @endfor
+                @endforeach
+                </div>
                 <a href="{{ route('rubric.show', $culture_id) }}" class="home_rubric_loadmore">Tous</a>
             </div>
         </div>

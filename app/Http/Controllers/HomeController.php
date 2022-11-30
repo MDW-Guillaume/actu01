@@ -26,24 +26,25 @@ class HomeController extends Controller
 
         $article_fait_divers = DB::table('articles')
             ->where('rubric_id', '=', $all_rubrics_id[0][0]['id'])
+            ->orderBy('created_at', 'desc')
             ->get();
 
         $article_sports = DB::table('articles')
             ->where('rubric_id', '=', $all_rubrics_id[1][0]['id'])
+            ->orderBy('created_at', 'desc')
             ->get();
 
         $article_culture = DB::table('articles')
             ->where('rubric_id', '=', $all_rubrics_id[2][0]['id'])
+            ->orderBy('created_at', 'desc')
             ->get();
 
         $article_populaire = DB::table('articles')
             ->orderBy('read', 'desc')
-            ->take(2)
             ->get();
         
         $article_recent = DB::table('articles')
             ->orderBy('created_at', 'desc')
-            ->take(2)
             ->get();
 
         

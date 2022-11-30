@@ -6,23 +6,27 @@ let nameSpan = document.getElementById('user_personnal_info_span_name')
 let nameIcon = document.getElementById('update-name')
 let btn = document.getElementById('button')
 let btnReturn = document.getElementById('btnReturn')
+let modifyBtn = document.getElementById('modify-text')
 
 
 nameIcon.addEventListener('click', function(){
     nameSpan.classList.add('hidden')
     nameInput.classList.add('show')
     btn.classList.add('show')
+    modifyBtn.classList.add('hidden')
 })
 
 emailIcon.addEventListener('click', function(){
     emailSpan.classList.add('hidden')
     emailInput.classList.add('show')
     btn.classList.add('show')
+    modifyBtn.classList.add('hidden')
 })
 
 btnReturn.addEventListener('click', function(event){
     event.preventDefault()
     btn.classList.remove('show')
+    modifyBtn.classList.add('show')
 
     if(emailSpan.classList.contains("hidden")){
         emailSpan.classList.remove('hidden')
@@ -33,4 +37,12 @@ btnReturn.addEventListener('click', function(event){
         nameSpan.classList.remove('hidden')
         nameInput.classList.remove('show')
     }
+})
+
+modifyBtn.addEventListener('click', function(){
+    emailSpan.classList.add('hidden')
+    emailInput.classList.add('show')
+    nameSpan.classList.add('hidden')
+    nameInput.classList.add('show')
+    btn.classList.add('show')
 })

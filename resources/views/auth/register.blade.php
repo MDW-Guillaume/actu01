@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container register">
         <div class="form-auth">
             <div class="rubric_title account-title">
                 <h2>Créer un compte</h2>

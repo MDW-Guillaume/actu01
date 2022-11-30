@@ -22,7 +22,7 @@
             </a>
             <span class="user_side_separator"></span>
             {{-- <a href="{{ route('account') }}">s'abonner</a> --}}
-            <a href="" class="user-side-subscribe">s'abonner</a>
+            <a href="{{ route('contact') }}" class="user-side-subscribe">s'abonner</a>
         </div>
         @else
         <div class="user_side">

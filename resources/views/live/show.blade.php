@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container live">
         <div class="rubric_title">
             <h2>Live</h2>
         </div>
