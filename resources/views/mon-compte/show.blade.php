@@ -22,7 +22,7 @@
                             <i class="fa-regular fa-pen-to-square" id="update-name"></i>
                         </span>
                     </p> {{-- display : block jusqu'a interaction avec l'icone ou le bouton --}}
-                    <input name="name" type="text" id="user_personnal_info_name_input" placeholder="{{ $user_info->name }}">
+                    <input name="name" type="text" id="user_personnal_info_name_input" value="{{ $user_info->name }}" placeholder="{{ $user_info->name }}">
                     {{-- display : none jusqu'a interaction avec l'icone ou le bouton --}}
 
                 </div>
@@ -33,7 +33,7 @@
                             <i class="fa-regular fa-pen-to-square" id="update-email"></i>
                         </span>
                     </p> {{-- display : block jusqu'a interaction avec l'icone ou le bouton --}}
-                    <input name="email" type="email" id="user_personnal_info_email_input" placeholder="{{ $user_info->email }}">
+                    <input name="email" type="email" id="user_personnal_info_email_input" value="{{ $user_info->email }}" placeholder="{{ $user_info->email }}">
                     {{-- display : none jusqu'a interaction avec l'icone ou le bouton --}}
 
                 </div>

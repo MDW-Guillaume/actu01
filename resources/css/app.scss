@@ -163,6 +163,29 @@ body {
         max-width: 375px;
         width    : 100%;
 
+        &.search{
+            height : 31vh;
+            .no-news {
+                transform : translateY(60%);
+                height    : 60px;
+                text-align: center;
+
+                i {
+                    font-size: 50px;
+                    opacity  : 0.5;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                    font-weight  : 500;
+                    font-size    : 14px;
+                    line-height  : 19px;
+                    color        : #263768;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
         &.margin {
             max-width: calc(375px - 20px);
             margin   : 10px;

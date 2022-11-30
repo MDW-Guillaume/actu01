@@ -13,7 +13,7 @@
     @include('includes.header')
     @yield('content')
     @include('includes.footer')
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/search.js'])
     @yield('js')
 </body>
 </html>

@@ -7,7 +7,10 @@
 @section('content')
     <div class="container">
         <div class="rubric_title">
-            <h2>Live</h2>
+            <h2>Météo</h2>
+        </div>
+        <div class="meteo">
+            
         </div>
     </div>
  @endsection

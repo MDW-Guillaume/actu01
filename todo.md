@@ -3,15 +3,15 @@
 ## Liste des pages
 
 - [x] Index
-- [ ] Météo
+- [x] Météo
 - [x] Article Unique
 - [x] Catégorie
   - [x] Catégorie/{article}
 - [x] Contact
-- [ ] Mon compte
-  - [ ] Connexion / Inscription
-  - [ ] Mon compte 
-  - [ ] Mes actus
+- [x] Mon compte
+  - [x] Connexion / Inscription
+  - [x] Mon compte 
+  - [x] Mes actus
 
 ## Routes
 
@@ -19,8 +19,8 @@
 - [x] /article/{id}
 - [x] /categorie
 - [x] /categorie/{slug}
-- [ ] /user
-- [ ] /user/{id}
+- [x] /user
+- [x] /user/{id}
 - [x] /live
 - [ ] /meteo
 - [x] /contact

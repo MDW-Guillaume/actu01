@@ -10,6 +10,17 @@
     <hr>
     <div class="footer_pages">
         <ul>
+            @auth
+            <li>
+                <a href=""> Mon compte</a>
+            </li>
+            <li>
+                <a href=""> S'abonner</a>
+            </li>
+            <li>
+                <a href="{{ route('newsletter') }}"> Newsletter</a>
+            </li>
+            @else
             <li>
                 <a href=""> Se connecter</a>
             </li>
@@ -19,9 +30,7 @@
             <li>
                 <a href="{{ route('newsletter') }}"> Newsletter</a>
             </li>
-            <li>
-                <a href=""> Mon compte</a>
-            </li>
+            @endauth
         </ul>
     </div>
     <hr>

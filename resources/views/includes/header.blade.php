@@ -35,14 +35,14 @@
             <li><a href="{{ route('home') }}"><i class="fa fa-home"></i></a></li>
             <li><a href="{{ route('live') }}">Le live</a></li>
             <li><a href="{{ route('newsletter') }}">Newsletter</a></li>
-            <li><a href="">Météo</a></li>
+            <li><a href="{{ route('meteo') }}">Météo</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
             <li id="search-open"><a href="#"><i class="fa fa-search"></i></a></li>
         </ul>
     </div>
 
     <div class="searchbar-header" id="search-content">
-        <form action="">
+        <form action="{{ route('search') }}" method="get">
             @csrf
             <div class="inputs">
                 <input type="text" name="search" id="search" placeholder="Recherche ACTU-01...">

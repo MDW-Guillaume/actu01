@@ -7,6 +7,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Auth;
+
 use App\Http\Requests\ProfileUpdateRequest;
 
 class UserController extends Controller
@@ -21,12 +22,19 @@ class UserController extends Controller
         return view('mon-compte.show', ['user_info' => $user_info, 'user_articles' => $user_articles]);
     }
 
-    public function store(UserRequest $request){
+    public function update(UserRequest $request){
 
-        dd($request);
-        // $update_user = new User;
+        // dd(Auth::user()->id);
 
-        // $count = User::where('email', $request->email)->count();
+        $update_user = new User;
+
+        $me = User::where('id', Auth::user()->id)->firstOrFail();
+
+        $me->name = $request->name;
+        $me->email = $request->email;
+        $me->save();
+        return redirect()->route('mon-compte')->with('status', 'Vos informations ont étés modifiées');
+        // dd($request->email);
         
     }
 }
