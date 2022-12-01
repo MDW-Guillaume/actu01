@@ -3,7 +3,7 @@
 <?php use App\Models\Article; ?>
 
 @section('title')
-    Article -
+    Article - {{$article->name}}
 @endsection
 
 @section('content')
@@ -21,8 +21,12 @@
                     , mise à jour à
                     <?= date('h:i', strtotime($article->updated_at)) ?>
                 </span><br>
-                <span class="read-time"><img src="{{ URL::to('/') }}/img/time.png" alt="Temps de lecture"> lecture
-                    {{ $tempslecture }} min.</span>
+                <span class="read-time">
+                    <img src="{{ URL::to('/') }}/img/time.png" alt="Temps de lecture"> lecture
+                    {{ $tempslecture }} min.
+                    <img src="{{ URL::to('/') }}/img/eye-solid.svg" alt="Nombre de lecture" class="read-time-img">
+                    {{ $article->read }} fois
+                </span>
             </div>
             <div class="article_socials">
                 <ul>
@@ -41,7 +45,7 @@
         <div class="similar_article">
             <h2>Articles suivants</h2>
             <div class="simiar_article_list">
-                @if (count($similar_articles) == 0)
+                @if (count($similar_articles) != 3)
                     <?php $similar_articles = Article::take(3)->get(); ?>
                 @endif
                 @foreach ($similar_articles as $similar_article)
