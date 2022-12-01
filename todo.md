@@ -5,8 +5,9 @@
 - [x] Mon compte (Format bureau)
 - [ ] Footer a fixer en bas de page
 - [x] ScrollBar Mon-compte
-- [ ] Pagination
+- [x] Pagination
 - [x] Auteur Live
+- [ ] Limiter les caractères des titres
 
 
 ## Fonctions 

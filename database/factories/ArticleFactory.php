@@ -18,11 +18,11 @@ class ArticleFactory extends Factory
     {
         return [
             'name' => fake()->realText(),
-            'content' => fake()->realText(),
+            'content' => fake()->paragraphs(4),
             'image' => fake()->imageUrl(640, 480, 'animals', true),
             'read' => fake()->numberBetween(1, 350),  
             'user_id' => fake()->numberBetween(1, 7),
-            'rubric_id' => fake()->numberBetween(1, 8),
+            'rubric_id' => fake()->numberBetween(1, 9),
 
         ];
     }

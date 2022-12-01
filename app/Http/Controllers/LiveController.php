@@ -13,7 +13,7 @@ class LiveController extends Controller
         $article_recent = DB::table('articles')
             ->orderBy('created_at', 'desc')
             ->take(10)
-            ->get();
+            ->paginate(12);
             
         return view('live.show', ['articles_recents' => $article_recent, 'users' => $users]);
     }

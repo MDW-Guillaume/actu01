@@ -12,10 +12,9 @@ body {
 }
 
 header {
-    display         : flex;
-    flex-direction  : column;
-    position        : relative;
-    background-color: green;
+    display       : flex;
+    flex-direction: column;
+    position      : relative;
 
     .hamburger-menu {
         display: none;
@@ -583,8 +582,8 @@ header {
 
                 /* Chrome, Edge, and Safari */
                 &::-webkit-scrollbar {
-                    width: 0px;
-                    height : 5px;
+                    width : 0px;
+                    height: 5px;
                 }
 
                 &::-webkit-scrollbar-track {
@@ -1370,10 +1369,17 @@ footer {
 
     header {
 
-        // .sub-header, .menu-header{
-        //     max-width: 1600px;
-        // }
-        .menu-header>.nav {
+        .sub-header .user_side {
+            .user-side-icon{
+                width : 120%;
+                height : 120%;
+            }
+            .user-side-subscribe {
+                font-size: 14px;
+            }
+        }
+
+        .menu-header .sub-header-bg .nav {
             padding: 5px 0;
 
             li>a {
@@ -1420,6 +1426,7 @@ footer {
 
         .rubric_article_info {
             margin-top: 5px;
+
             span {
                 font-size: 14px;
             }
@@ -1500,6 +1507,8 @@ footer {
         }
 
         &.live {
+            margin-bottom: 30px;
+
             .rubric_article {
                 a {
                     width: calc(33% - 20px);
@@ -1547,5 +1556,33 @@ footer {
             }
         }
 
+        .pagination {
+            margin-top: 30px;
+
+            .hidden {
+                display: none;
+            }
+
+            .flex {
+                display        : flex;
+                justify-content: space-evenly;
+                width          : 100%;
+
+                a,
+                span {
+                    color           : white;
+                    background-color: #0094C4;
+                    text-transform  : uppercase;
+                    text-decoration : none;
+                    padding         : 10px 15px;
+                    border-radius   : 5.66667px;
+                    font-size       : 16px;
+                }
+
+                span {
+                    background-color: grey;
+                }
+            }
+        }
     }
 }
