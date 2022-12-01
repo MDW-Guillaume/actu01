@@ -11,10 +11,10 @@
 
             <div class="newsletter_content">
                 <p>Recevez vos actualités quotidiennement !</p>
-                <form action="#" method="post" id="formulaire">
-                    <input type="hidden" name="_token" id="csrf" value="{{Session::token()}}">
+                <form action="{{ route('newsletter') }}" method="post">
+                    @csrf
                     <input type="email" name="email" id="email">
-                    <input type="submit" value="S'abonner" id="submitForm">
+                    <input type="submit" value="S'abonner">
                 </form>
             </div>
         </div>

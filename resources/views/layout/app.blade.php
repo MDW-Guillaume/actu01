@@ -14,6 +14,7 @@
     @yield('content')
     @include('includes.footer')
     @vite(['resources/js/search.js'])
+    @vite(['resources/js/menu.js'])
     @yield('js')
 </body>
 </html>

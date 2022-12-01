@@ -26,7 +26,7 @@ emailIcon.addEventListener('click', function(){
 btnReturn.addEventListener('click', function(event){
     event.preventDefault()
     btn.classList.remove('show')
-    modifyBtn.classList.add('show')
+    modifyBtn.classList.remove('hidden')
 
     if(emailSpan.classList.contains("hidden")){
         emailSpan.classList.remove('hidden')
@@ -40,6 +40,7 @@ btnReturn.addEventListener('click', function(event){
 })
 
 modifyBtn.addEventListener('click', function(){
+    modifyBtn.classList.add('hidden')
     emailSpan.classList.add('hidden')
     emailInput.classList.add('show')
     nameSpan.classList.add('hidden')

@@ -1,8 +1,12 @@
 # Actu-01
 
-## Formats
-### Tablette (768px)
+## To-Do
 
+- [x] Mon compte (Format bureau)
+- [ ] Footer a fixer en bas de page
+- [x] ScrollBar Mon-compte
+- [ ] Pagination
+- [x] Auteur Live
 
 
 ## Fonctions 
@@ -28,4 +32,10 @@ $('input.checkbox').on('change', function(e) {
     });
 });
 ```
+
+##### Utile / Packages
+
+Pagination : Bootstrap
+
+
 

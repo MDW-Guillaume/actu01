@@ -17,7 +17,7 @@
                             <div class="rubric_article_details">
                                 <h3>{{ $article_recent->name }}</h3>
                                 <div class="rubric_article_info">
-                                    {{-- <span>Par {{ $article_recent[$article_recent->user_id]->name }}</span> --}}
+                                    <span>Par {{ $users[$article_recent->user_id]->name }}</span>
                                     <span><?= date(' d F Y', strtotime($article_recent->created_at)) ?></span>
                                 </div>
                             </div>
