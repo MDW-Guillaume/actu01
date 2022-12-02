@@ -5,6 +5,12 @@ git clone https://github.com/MDW-Guillaume/actu01.git
 cd actu01
 ```
 
+## Prérequis
+
+``` 
+node >= 16.0.0
+```
+
 ## Installation du programme
 
 ```
