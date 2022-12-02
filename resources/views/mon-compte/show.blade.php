@@ -62,7 +62,7 @@
                             <div class="home_lastest_news_element">
                                 <img src="{{ $user_article->image }}" alt="{{ $user_article->name }}">
                                 <div class="content_lastest_news">
-                                    <h2>{{ $user_article->name }}</h2>
+                                    <h2>{{ Str::limit($user_article->name, 80) }}</h2>
                                     <span>
                                         <?php
                                         setlocale(LC_ALL, 'fr_FR');
