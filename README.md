@@ -43,6 +43,9 @@ php artisan db:seed
 ```
 
 ## Lancez le serveur
+```
+npm run dev
+```
 
 ```
 php artisan serve
