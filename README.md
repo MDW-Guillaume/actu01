@@ -56,6 +56,7 @@ npm run dev
 ```
 
 ```
+php artisan key:generate
 php artisan serve
 ```
 
