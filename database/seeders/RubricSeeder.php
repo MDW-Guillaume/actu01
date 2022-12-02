@@ -20,7 +20,7 @@ class RubricSeeder extends Seeder
         // Rubric::factory()->count(8)->create();
         
         foreach ($categories as $categorie) {
-            \App\Models\Rubric::create(
+            \App\Models\Rubric::firstOrCreate(
                 ['name' => $categorie]
             );    
         }

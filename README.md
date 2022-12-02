@@ -14,7 +14,7 @@ cd actu01
 ```
 
 
-## Installation du programme
+## Installation / Configuration des composants
 
 ```
 composer install
@@ -46,11 +46,7 @@ DB_PASSWORD=
 
 ```
 php artisan migrate
-```
-```
-php artisan db:seed RubricSeeder
-php artisan db:seed UserSeeder
-php artisan db:seed ArticleSeeder
+php artisan db:seed 
 ```
 
 ## Lancez le serveur
