@@ -1,15 +1,18 @@
-# Installation du projet Actu-01
-
-``` 
-git clone https://github.com/MDW-Guillaume/actu01.git
-cd actu01
-```
+# Actu-01
 
 ## Prérequis
 
 ``` 
 node >= 16.0.0
 ```
+
+## Installation
+
+``` 
+git clone https://github.com/MDW-Guillaume/actu01.git
+cd actu01
+```
+
 
 ## Installation du programme
 
@@ -51,15 +54,15 @@ php artisan db:seed ArticleSeeder
 ```
 
 ## Lancez le serveur
-```
-npm run dev
-```
 
 ```
 php artisan key:generate
 php artisan serve
 ```
 
+```
+npm run dev
+```
 *Et voila le travail !*
 
 
