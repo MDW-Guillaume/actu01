@@ -1370,10 +1370,11 @@ footer {
     header {
 
         .sub-header .user_side {
-            .user-side-icon{
+            .user-side-icon {
                 width : 120%;
-                height : 120%;
+                height: 120%;
             }
+
             .user-side-subscribe {
                 font-size: 14px;
             }
@@ -1462,6 +1463,7 @@ footer {
                 height         : 250px;
                 object-fit     : cover;
                 object-position: center;
+                margin-bottom  : 30px;
             }
 
             .article_socials {
@@ -1470,7 +1472,8 @@ footer {
 
             .article_content {
                 p.article_description {
-                    font-size: 16px;
+                    margin-top: 20px;
+                    font-size : 16px;
                 }
             }
 
@@ -1481,8 +1484,9 @@ footer {
                 span {
                     font-size: 14px;
                 }
-                .read-time-img{
-                    margin-left : 20px;
+
+                .read-time-img {
+                    margin-left: 20px;
                 }
             }
         }

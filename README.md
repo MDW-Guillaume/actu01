@@ -39,7 +39,9 @@ DB_PASSWORD=
 php artisan migrate
 ```
 ```
-php artisan db:seed
+php artisan db:seed RubricSeeder
+php artisan db:seed UserSeeder
+php artisan db:seed ArticleSeeder
 ```
 
 ## Lancez le serveur

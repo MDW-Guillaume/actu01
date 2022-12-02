@@ -23,7 +23,7 @@ class ArticleFactory extends Factory
             'read' => fake()->numberBetween(1, 350),  
             'user_id' => fake()->numberBetween(1, 7),
             'rubric_id' => fake()->numberBetween(1, 9),
-
+            
         ];
     }
 }

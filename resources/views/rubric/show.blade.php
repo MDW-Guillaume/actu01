@@ -15,7 +15,7 @@
                     <div class="rubric_unique_article">
                         <img src="{{ $article->image }}" alt="">
                         <div class="rubric_article_details">
-                            <h3>{{ $article->name }}</h3>
+                            <h3>{{ Str::limit($article->name, 80) }}</h3>
                             <div class="rubric_article_info">
                                 <span>Par {{ $users[$article->user_id - 1]->name }}</span>
                                 <span><?= date(' d F Y', strtotime($article->created_at)) ?></span>

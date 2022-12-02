@@ -15,7 +15,7 @@
                             <span>À ne pas manquer</span>
                         </div>
                         <div class="content_lastest_news">
-                            <h2>{{ $articles[$i]->name }}</h2>
+                            <h2>{{ Str::limit($articles[$i]->name, 80) }}</h2>
                             <span>Par {{ $users[$articles[$i]->user_id - 1]->name }}</span><br>
                             {{-- Lien vers la page de l'utilisateur --}}
                             <span>
@@ -42,7 +42,7 @@
                                 <div class="rubric_unique_article">
                                     <img src="{{ $article_divers->image }}" alt="{{ $articles[$i]->name }}">
                                     <div class="rubric_article_details">
-                                        <h3>{{ $article_divers->name }}</h3>
+                                        <h3>{{ Str::limit($article_divers->name, 80) }}</h3>
                                         <div class="rubric_article_info">
                                             <span>Par {{ $users[$article_divers->user_id - 1]->name }}</span>
                                             <span><?= date(' d F Y', strtotime($article_divers->created_at)) ?></span>
@@ -67,7 +67,7 @@
                             <div class="rubric_unique_article">
                                 <img src="{{ $article_sport->image }}" alt="{{ $articles[$i]->name }}">
                                 <div class="rubric_article_details">
-                                    <h3>{{ $article_sport->name }}</h3>
+                                    <h3>{{ Str::limit($article_sport->name, 80) }}</h3>
                                     <div class="rubric_article_info">
                                         <span>Par {{ $users[$article_sport->user_id - 1]->name }}</span>
                                         <span><?= date(' d F Y', strtotime($article_sport->created_at)) ?></span>
@@ -92,7 +92,7 @@
                             <div class="rubric_unique_article">
                                 <img src="{{ $article_culture->image }}" alt="{{ $articles[$i]->name }}">
                                 <div class="rubric_article_details">
-                                    <h3>{{ $article_culture->name }}</h3>
+                                    <h3>{{ Str::limit($article_culture->name, 80) }}</h3>
                                     <div class="rubric_article_info">
                                         <span>Par {{ $users[$article_culture->user_id - 1]->name }}</span>
                                         <span><?= date(' d F Y', strtotime($article_culture->created_at)) ?></span>
@@ -117,7 +117,7 @@
                             <div class="rubric_unique_article">
                                 <img src="{{ $article_populaires->image }}" alt="{{ $articles[$i]->name }}">
                                 <div class="rubric_article_details">
-                                    <h3>{{ $article_populaires->name }}</h3>
+                                    <h3>{{ Str::limit($article_populaires->name, 80) }}</h3>
                                     <div class="rubric_article_info">
                                         <span>Par {{ $users[$article_populaires->user_id - 1]->name }}</span>
                                         <span><?= date(' d F Y', strtotime($article_populaires->created_at)) ?></span>
@@ -142,7 +142,7 @@
                             <span>Live</span>
                         </div>
                         <div class="content_lastest_news">
-                            <h2>{{ $articles[$i]->name }}</h2>
+                            <h2>{{ Str::limit($articles[$i]->name, 80) }}</h2>
                             <span>Par {{ $users[$articles[$i]->user_id - 1]->name }}</span><br>
                             {{-- Lien vers la page de l'utilisateur --}}
                             <span>
