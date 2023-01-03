@@ -10,6 +10,7 @@ use App\Http\Controllers\RubricController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
